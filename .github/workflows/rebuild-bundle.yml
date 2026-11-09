@@ -6,10 +6,11 @@ run-name: "Rebuild PR #${{ github.event.pull_request.number }} at ${{ github.eve
 # A maintainer dispatches publish-bundle.yml on main to commit a reviewed build.
 # `synchronize` retries after rebases; publishing stops when dist/ is unchanged.
 # The publisher verifies this workflow's Git blob before trusting its run name.
-on:
-  pull_request:
-    types: [labeled, synchronize]
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   pull_request:
+#     types: [labeled, synchronize]
+# 
 permissions: {}
 
 concurrency:

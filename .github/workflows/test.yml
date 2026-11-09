@@ -1,17 +1,18 @@
 name: Test
 
-on:
-  push:
-    branches: [main]
-  pull_request:
-  merge_group:
-  workflow_dispatch:
-    inputs:
-      pr_version:
-        description: "pkg.pr.new PR number or commit SHA to test an unreleased Vite+ build (e.g. 1569). Leave empty to test the latest published release."
-        required: false
-        default: ""
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   push:
+#     branches: [main]
+#   pull_request:
+#   merge_group:
+#   workflow_dispatch:
+#     inputs:
+#       pr_version:
+#         description: "pkg.pr.new PR number or commit SHA to test an unreleased Vite+ build (e.g. 1569). Leave empty to test the latest published release."
+#         required: false
+#         default: ""
+# 
 permissions:
   contents: read
 

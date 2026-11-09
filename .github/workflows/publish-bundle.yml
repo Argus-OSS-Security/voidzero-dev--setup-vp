@@ -2,14 +2,15 @@ name: Publish rebuilt action bundle
 
 # Maintainers dispatch this publisher on main after reviewing a completed build.
 # Never check out PR code, restore its caches, or execute downloaded artifacts.
-on:
-  workflow_dispatch:
-    inputs:
-      run_id:
-        description: "Successful Rebuild action bundle run ID to publish."
-        required: true
-        type: string
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   workflow_dispatch:
+#     inputs:
+#       run_id:
+#         description: "Successful Rebuild action bundle run ID to publish."
+#         required: true
+#         type: string
+# 
 permissions: {}
 
 jobs:
